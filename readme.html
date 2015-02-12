@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>readme</title>
+<!-- 2015-02-12 Thu 18:37 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">readme</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. DOM.Barf</a></li>
+<li><a href="#sec-2">2. Small Example</a></li>
+<li><a href="#sec-3">3. Features and Operation</a></li>
+<li><a href="#sec-4">4. Examples</a></li>
+<li><a href="#sec-5">5. API Reference</a>
+<ul>
+<li><a href="#sec-5-1">5.1. DOM.Barf.SpitOut(&lt;tagName&gt;, [tagAttributes], [tagChildren], [options])</a>
+<ul>
+<li><a href="#sec-5-1-1">5.1.1. Keyword Arguments:</a></li>
+<li><a href="#sec-5-1-2">5.1.2. Optional Arguments:</a></li>
+<li><a href="#sec-5-1-3">5.1.3. Returns:</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-2">5.2. DOM.Barf.toSpit(&lt;tagName&gt;, [passedOptions])</a>
+<ul>
+<li><a href="#sec-5-2-1">5.2.1. Keyword Arguments:</a></li>
+<li><a href="#sec-5-2-2">5.2.2. Returns:</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-3">5.3. DOM.Barf.ToCss(&lt;selectorName&gt;, [attrs])</a>
+<ul>
+<li><a href="#sec-5-3-1">5.3.1. Keyword Arguments:</a></li>
+<li><a href="#sec-5-3-2">5.3.2. Examples:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Predefined 'toSpit' Functions</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> DOM.Barf</h2>
+<div class="outline-text-2" id="text-1">
+
+<div class="figure">
+<p><img src="./doc/logo.png" alt="logo.png" />
+</p>
+</div>
+
+<p>
+<b>DOM.Barf</b> is my take on generating stringified HTML code from a set
+of simple composable functions representing HTML Elements.
+</p>
+
+<p>
+It carries some inspiration from <a href="https://github.com/weavejester/hiccup">hiccup</a>, but has none of it's
+awesome features.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Small Example</h2>
+<div class="outline-text-2" id="text-2">
+<div class="org-src-container">
+
+<pre class="src src-js"><span style="color: #6F8F6F;">//</span><span style="color: #7F9F7F;">TODO</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Features and Operation</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>DOM.Barf's main functionality consists of composable functions
+that only need to return a string. This allows for easily
+extending DOM.Barf with some dribble.
+</li>
+<li>Helpful shortcuts and helper functions for quickly expressing
+yourself in disgust.
+<ul class="org-ul">
+<li><b>DOM.Barf.ToCss</b> for generating stylesheet expressions
+</li>
+<li><b>DOM.Barf.ToRaw</b> for for even more composability!
+</li>
+</ul>
+</li>
+<li>By default, conveniently converts camelCased attributes into
+dashed variable names (ex. BorderBottomSize &#x2013;&gt;
+border-bottom-size)
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Examples</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+<i>todo</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> API Reference</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> DOM.Barf.SpitOut(&lt;tagName&gt;, [tagAttributes], [tagChildren], [options])</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+This is the raw input method to barf / spit out a string
+representation of XML. This forms the representation: 
+</p>
+
+<pre class="example">
+&lt;tagName {tagAttributes()}&gt;{tagChildren()}&lt;/tagName&gt;
+</pre>
+</div>
+
+<div id="outline-container-sec-5-1-1" class="outline-4">
+<h4 id="sec-5-1-1"><span class="section-number-4">5.1.1</span> Keyword Arguments:</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<dl class="org-dl">
+<dt> tagName </dt><dd>the tag of our XML element
+</dd>
+
+<dt> tagAttributes </dt><dd>a dictionary listing of XML attributes for the current tag
+</dd>
+
+<dt> tagChildren </dt><dd>a list of other DOM.Barf functions which are
+concatenated to fill this current DOM string. This
+can also just be a list of strings, as the
+resulting listing should form a list of strings.
+</dd>
+
+<dt> options </dt><dd>optional hash-table listing optional arguments
+</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-sec-5-1-2" class="outline-4">
+<h4 id="sec-5-1-2"><span class="section-number-4">5.1.2</span> Optional Arguments:</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<dl class="org-dl">
+<dt> bSingular </dt><dd>whether the given XML element is singular. Namely,
+it has a forward flash, and no children. ex. meta
+tags &#x2013;&gt; &lt;meta&gt; [default:false]
+</dd>
+
+<dt> bConvertCamelCase </dt><dd>determines whether attributes, and listed
+attribute style's names are converted from camelcase to the
+equivalent dash-named, which is common in html
+attributes. ex. EquivHtmlTerm &#x2013;&gt; equiv-html-term.
+[default:true]
+</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-sec-5-1-3" class="outline-4">
+<h4 id="sec-5-1-3"><span class="section-number-4">5.1.3</span> Returns:</h4>
+<div class="outline-text-4" id="text-5-1-3">
+<p>
+A string representing the given HTML element, with given 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> DOM.Barf.toSpit(&lt;tagName&gt;, [passedOptions])</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Provides partial application for the DOM.Barf.SpitOut function,
+while providing permanently passedOptions which can still be
+overriden at evaluation.
+</p>
+</div>
+
+<div id="outline-container-sec-5-2-1" class="outline-4">
+<h4 id="sec-5-2-1"><span class="section-number-4">5.2.1</span> Keyword Arguments:</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<dl class="org-dl">
+<dt> tagName </dt><dd>the tagname to be generated from our returned partial
+function
+</dd>
+<dt> passedOptions </dt><dd>optional hash-table permanently setting
+optional arguments equivalent to
+DOM.Barf.SpitOut optional arguments.
+</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2-2" class="outline-4">
+<h4 id="sec-5-2-2"><span class="section-number-4">5.2.2</span> Returns:</h4>
+<div class="outline-text-4" id="text-5-2-2">
+<p>
+A partial function of the form function([tagAttributes],
+[tagChildren], [options]) with the same characteristics as
+DOM.Barf.SpitOut.
+</p>
+
+<p>
+example:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js"><span style="color: #DEC77B;">var</span> <span style="color: #EFA252;">_s</span> = DOM.Barf;
+
+_s.a = _s.toSpit(<span style="color: #8CBED6;">"a"</span>);
+
+_s.a() <span style="color: #6F8F6F;">//</span><span style="color: #7F9F7F;">&lt;a&gt;&lt;/a&gt;</span>
+_a.a({href: <span style="color: #8CBED6;">"http://www.google.com"</span>}, <span style="color: #8CBED6;">"link"</span>) <span style="color: #6F8F6F;">//</span><span style="color: #7F9F7F;">&lt;a href="http://www.google.com"&gt;link&lt;/a&gt;</span>
+
+_s.meta = _s.toSpit(<span style="color: #8CBED6;">"meta"</span>, {bSingular:<span style="color: #DEC77B;">true</span>})
+_s.meta({httpEquiv: <span style="color: #8CBED6;">"X-UA-Compatible"</span>, content: <span style="color: #8CBED6;">"IE=edge"</span>}) <span style="color: #6F8F6F;">//</span><span style="color: #7F9F7F;">&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> DOM.Barf.ToCss(&lt;selectorName&gt;, [attrs])</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+Generates a stylesheet for the provided selector tag, and tag
+attributes.
+</p>
+</div>
+
+<div id="outline-container-sec-5-3-1" class="outline-4">
+<h4 id="sec-5-3-1"><span class="section-number-4">5.3.1</span> Keyword Arguments:</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<dl class="org-dl">
+<dt> selectorName </dt><dd>The name to provide for the css selector
+</dd>
+
+<dt> attrs </dt><dd>dictionary of attributes to provide for the given css
+selector
+</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3-2" class="outline-4">
+<h4 id="sec-5-3-2"><span class="section-number-4">5.3.2</span> Examples:</h4>
+<div class="outline-text-4" id="text-5-3-2">
+<div class="org-src-container">
+
+<pre class="src src-js"><span style="color: #DEC77B;">var</span> <span style="color: #EFA252;">_s</span> = DOM.Barf;
+
+_s.ToCss(<span style="color: #8CBED6;">"a:hover"</span>, {textDecoration: <span style="color: #8CBED6;">"none"</span>, fontSize: <span style="color: #8CBED6;">"12px"</span>}) <span style="color: #6F8F6F;">// </span><span style="color: #7F9F7F;">a:hover {text-decoration:none;font-size: 12px;}</span>
+
+_s.style(<span style="color: #DEC77B;">null</span>, [
+  _s.ToCss(<span style="color: #8CBED6;">"body"</span>, {
+    position: <span style="color: #8CBED6;">"relative"</span>,
+    margin: <span style="color: #8CBED6;">"auto auto"</span>,
+    width: <span style="color: #8CBED6;">"600px"</span>,
+  }),
+  _s.ToCss(<span style="color: #8CBED6;">"#main-container"</span>, {
+    position: <span style="color: #8CBED6;">"relative"</span>,
+    width: <span style="color: #8CBED6;">"100%"</span>,
+    height: <span style="color: #8CBED6;">"100%"</span>,
+  }),
+]);
+
+<span style="color: #6F8F6F;">//</span><span style="color: #7F9F7F;">&lt;style&gt;body {position:relative; margin: auto auto; width: 600px;} #maincontainer {position: relative; width: 100%; height: 100%;}&lt;/style&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Predefined 'toSpit' Functions</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>DOM.Barf.html = DOM.Barf.toSpit("html");
+</li>
+<li>DOM.Barf.head = DOM.Barf.toSpit("head");
+</li>
+<li>DOM.Barf.title = DOM.Barf.toSpit("title");
+</li>
+<li>DOM.Barf.body = DOM.Barf.toSpit("body");
+</li>
+<li>DOM.Barf.div = DOM.Barf.toSpit("div");
+</li>
+<li>DOM.Barf.img = DOM.Barf.toSpit("img", {bSingular:true});
+</li>
+<li>DOM.Barf.a = DOM.Barf.toSpit("a");
+</li>
+<li>DOM.Barf.p = DOM.Barf.toSpit("p");
+</li>
+<li>DOM.Barf.input = DOM.Barf.toSpit("input");
+</li>
+<li>DOM.Barf.table = DOM.Barf.toSpit("table");
+</li>
+<li>DOM.Barf.tr = DOM.Barf.toSpit("tr");
+</li>
+<li>DOM.Barf.td = DOM.Barf.toSpit("td");
+</li>
+<li>DOM.Barf.li = DOM.Barf.toSpit("li");
+</li>
+<li>DOM.Barf.ul = DOM.Barf.toSpit("ul");
+</li>
+<li>DOM.Barf.style = DOM.Barf.toSpit("style");
+</li>
+<li>DOM.Barf.script = DOM.Barf.toSpit("script");
+</li>
+<li>DOM.Barf.meta = DOM.Barf.toSpit("meta", {bSingular:true});
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2015-02-12 Thu 18:37</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.4.1 (<a href="http://orgmode.org">Org</a> mode 8.2.7c)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

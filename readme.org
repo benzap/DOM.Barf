@@ -1,1 +1,174 @@
-/ More coming soon /
+* DOM.Barf
+
+  [[./doc/logo.png]]
+
+  *DOM.Barf* is my take on generating stringified HTML code from a set
+  of simple composable functions representing HTML Elements.
+   
+  It carries some inspiration from [[https://github.com/weavejester/hiccup][hiccup]], but has none of it's
+  awesome features.
+
+  #+BEGIN_COMMENT 
+  Include demo page which is statically built with DOM.Barf
+  #+END_COMMENT
+
+* Small Example
+  #+BEGIN_SRC js
+//TODO
+  #+END_SRC
+
+* Features and Operation
+  - DOM.Barf's main functionality consists of composable functions
+    that only need to return a string. This allows for easily
+    extending DOM.Barf with some dribble.
+  - Helpful shortcuts and helper functions for quickly expressing
+    yourself in disgust.
+    - *DOM.Barf.ToCss* for generating stylesheet expressions
+    - *DOM.Barf.ToRaw* for for even more composability!
+  - By default, conveniently converts camelCased attributes into
+    dashed variable names (ex. BorderBottomSize -->
+    border-bottom-size)
+
+* Examples
+  /todo/
+
+* API Reference
+** DOM.Barf.SpitOut(<tagName>, [tagAttributes], [tagChildren], [options])
+
+   This is the raw input method to barf / spit out a string
+   representation of XML. This forms the representation: 
+
+   #+BEGIN_SRC
+   <tagName {tagAttributes()}>{tagChildren()}</tagName>
+   #+END_SRC
+
+*** Keyword Arguments:
+
+   - tagName :: the tag of our XML element
+      
+   - tagAttributes :: a dictionary listing of XML attributes for the current tag
+
+   - tagChildren :: a list of other DOM.Barf functions which are
+                    concatenated to fill this current DOM string. This
+                    can also just be a list of strings, as the
+                    resulting listing should form a list of strings.
+
+   - options :: optional hash-table listing optional arguments
+
+*** Optional Arguments:
+
+    - bSingular :: whether the given XML element is singular. Namely,
+                   it has a forward flash, and no children. ex. meta
+                   tags --> <meta> [default:false]
+
+    - bConvertCamelCase :: determines whether attributes, and listed
+         attribute style's names are converted from camelcase to the
+         equivalent dash-named, which is common in html
+         attributes. ex. EquivHtmlTerm --> equiv-html-term.
+         [default:true]
+
+*** Returns:
+    A string representing the given HTML element, with given 
+
+** DOM.Barf.toSpit(<tagName>, [passedOptions])
+   
+   Provides partial application for the DOM.Barf.SpitOut function,
+   while providing permanently passedOptions which can still be
+   overriden at evaluation.
+
+*** Keyword Arguments:
+    
+    - tagName :: the tagname to be generated from our returned partial
+                 function
+    - passedOptions :: optional hash-table permanently setting
+                       optional arguments equivalent to
+                       DOM.Barf.SpitOut optional arguments.
+
+*** Returns:
+    A partial function of the form function([tagAttributes],
+    [tagChildren], [options]) with the same characteristics as
+    DOM.Barf.SpitOut.
+
+    example:
+
+    #+BEGIN_SRC js
+var _s = DOM.Barf;
+
+_s.a = _s.toSpit("a");
+
+_s.a() //<a></a>
+_a.a({href: "http://www.google.com"}, "link") //<a href="http://www.google.com">link</a>
+
+_s.meta = _s.toSpit("meta", {bSingular:true})
+_s.meta({httpEquiv: "X-UA-Compatible", content: "IE=edge"}) //<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    #+END_SRC
+
+** DOM.Barf.ToCss(<selectorName>, [attrs])
+   
+   Generates a stylesheet for the provided selector tag, and tag
+   attributes.
+
+*** Keyword Arguments:
+   
+   - selectorName :: The name to provide for the css selector
+
+   - attrs :: dictionary of attributes to provide for the given css
+              selector
+
+*** Examples:
+    
+    #+BEGIN_SRC js
+
+var _s = DOM.Barf;
+
+_s.ToCss("a:hover", {textDecoration: "none", fontSize: "12px"}) // a:hover {text-decoration:none;font-size: 12px;}
+
+_s.style(null, [
+  _s.ToCss("body", {
+    position: "relative",
+    margin: "auto auto",
+    width: "600px",
+  }),
+  _s.ToCss("#main-container", {
+    position: "relative",
+    width: "100%",
+    height: "100%",
+  }),
+]);
+
+//<style>body {position:relative; margin: auto auto; width: 600px;} #maincontainer {position: relative; width: 100%; height: 100%;}</style>
+
+    #+END_SRC
+
+** DOM.Barf.ToRaw([children])
+   Concatenates and allows raw input of string data into DOM.Barf
+
+   Keyword Arguments:
+
+   - children :: equivalent to DOM.Barf.SpitOut's *tagChildren*
+                 field.
+
+*** Remarks
+    This function is functionally equivalent to concatenating a list
+    of strings. --> children.reduce(function(a,b){a+b},"")
+
+* Predefined 'toSpit' Functions
+   - DOM.Barf.html = DOM.Barf.toSpit("html");
+   - DOM.Barf.head = DOM.Barf.toSpit("head");
+   - DOM.Barf.title = DOM.Barf.toSpit("title");
+   - DOM.Barf.body = DOM.Barf.toSpit("body");
+   - DOM.Barf.div = DOM.Barf.toSpit("div");
+   - DOM.Barf.img = DOM.Barf.toSpit("img", {bSingular:true});
+   - DOM.Barf.a = DOM.Barf.toSpit("a");
+   - DOM.Barf.p = DOM.Barf.toSpit("p");
+   - DOM.Barf.input = DOM.Barf.toSpit("input");
+   - DOM.Barf.table = DOM.Barf.toSpit("table");
+   - DOM.Barf.tr = DOM.Barf.toSpit("tr");
+   - DOM.Barf.td = DOM.Barf.toSpit("td");
+   - DOM.Barf.li = DOM.Barf.toSpit("li");
+   - DOM.Barf.ul = DOM.Barf.toSpit("ul");
+   - DOM.Barf.style = DOM.Barf.toSpit("style");
+   - DOM.Barf.script = DOM.Barf.toSpit("script");
+   - DOM.Barf.meta = DOM.Barf.toSpit("meta", {bSingular:true});
+
+
