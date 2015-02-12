@@ -36,7 +36,7 @@
 ** DOM.Barf.SpitOut(<tagName>, [tagAttributes], [tagChildren], [options])
 
    This is the raw input method to barf / spit out a string
-   representation of XML. This forms the representation: 
+   representation of XML. This returns a string representation of:
 
    #+BEGIN_SRC
    <tagName {tagAttributes()}>{tagChildren()}</tagName>
@@ -89,7 +89,7 @@
     [tagChildren], [options]) with the same characteristics as
     DOM.Barf.SpitOut.
 
-    example:
+*** Examples:
 
     #+BEGIN_SRC js
 var _s = DOM.Barf;
@@ -171,4 +171,5 @@ _s.style(null, [
    - DOM.Barf.script = DOM.Barf.toSpit("script");
    - DOM.Barf.meta = DOM.Barf.toSpit("meta", {bSingular:true});
 
-
+* More Examples
+  /coming soon/
