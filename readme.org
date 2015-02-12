@@ -68,7 +68,7 @@
          [default:true]
 
 *** Returns:
-    A string representing the given HTML element, with given 
+    A string representing the HTML element described
 
 ** DOM.Barf.toSpit(<tagName>, [passedOptions])
    
