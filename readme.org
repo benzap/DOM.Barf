@@ -14,7 +14,33 @@
 
 * Small Example
   #+BEGIN_SRC js
-//TODO
+var _s = DOM.Barf;
+_s.h1 = _s.toSpit("h1");
+
+var fruitListing = ["banana", "apple", "tomato"];
+         
+var output = _s.div({id: "main-container"}, [
+    _s.h1(null, "Fruit Listing"),
+    _s.ul(null, 
+          fruitListing.map(function(elem) {
+              return _s.li({class: "fruit-element"}, elem);
+          })),
+]);
+console.log(output);
+
+  #+END_SRC
+
+  This produces the HTML string output (formatted for convenience)
+
+  #+BEGIN_SRC html
+<div id="main-container">
+   <h1>Fruit Listing</h1>
+   <ul>
+      <li class="fruit-element">banana</li>
+      <li class="fruit-element">apple</li>
+      <li class="fruit-element">tomato</li>
+   </ul>
+</div>
   #+END_SRC
 
 * Features and Operation

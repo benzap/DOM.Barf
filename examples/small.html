@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="../DOM.Barf.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript" src="../DOM.Barf.js"></script>
+		<script type="text/javascript">
+         var _s = DOM.Barf;
+		 _s.h1 = _s.toSpit("h1");
+		 
+         var fruitListing = ["banana", "apple", "tomato"];
+         
+         var output = _s.div({id: "main-container"}, [
+			 _s.h1(null, "Fruit Listing"),
+             _s.ul(null, 
+                   fruitListing.map(function(elem) {
+                       return _s.li({class: "fruit-element"}, elem);
+                   })),
+         ]);
+
+         console.log(output);
+		</script>
+	</body>
+</html>

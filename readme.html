@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>readme</title>
-<!-- 2015-02-12 Thu 18:48 -->
+<!-- 2015-02-12 Thu 19:14 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <style type="text/css">
@@ -205,7 +205,36 @@ awesome features.
 <div class="outline-text-2" id="text-2">
 <div class="org-src-container">
 
-<pre class="src src-js"><span style="color: #6F8F6F;">//</span><span style="color: #7F9F7F;">TODO</span>
+<pre class="src src-js"><span style="color: #DEC77B;">var</span> <span style="color: #EFA252;">_s</span> = DOM.Barf;
+_s.h1 = _s.toSpit(<span style="color: #8CBED6;">"h1"</span>);
+
+<span style="color: #DEC77B;">var</span> <span style="color: #EFA252;">fruitListing</span> = [<span style="color: #8CBED6;">"banana"</span>, <span style="color: #8CBED6;">"apple"</span>, <span style="color: #8CBED6;">"tomato"</span>];
+
+<span style="color: #DEC77B;">var</span> <span style="color: #EFA252;">output</span> = _s.div({id: <span style="color: #8CBED6;">"main-container"</span>}, [
+    _s.h1(<span style="color: #DEC77B;">null</span>, <span style="color: #8CBED6;">"Fruit Listing"</span>),
+    _s.ul(<span style="color: #DEC77B;">null</span>, 
+          fruitListing.map(<span style="color: #DEC77B;">function</span>(<span style="color: #EFA252;">elem</span>) {
+              <span style="color: #DEC77B;">return</span> _s.li({<span style="color: #DEC77B;">class</span>: <span style="color: #8CBED6;">"fruit-element"</span>}, elem);
+          })),
+]);
+console.log(output);
+</pre>
+</div>
+
+<p>
+This produces the HTML string output (formatted for convenience)
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-html">&lt;<span style="color: #D65921;">div</span> <span style="color: #EFA252;">id</span>=<span style="color: #8CBED6;">"main-container"</span>&gt;
+   &lt;<span style="color: #D65921;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Fruit Listing</span>&lt;/<span style="color: #D65921;">h1</span>&gt;
+   &lt;<span style="color: #D65921;">ul</span>&gt;
+      &lt;<span style="color: #D65921;">li</span> <span style="color: #EFA252;">class</span>=<span style="color: #8CBED6;">"fruit-element"</span>&gt;banana&lt;/<span style="color: #D65921;">li</span>&gt;
+      &lt;<span style="color: #D65921;">li</span> <span style="color: #EFA252;">class</span>=<span style="color: #8CBED6;">"fruit-element"</span>&gt;apple&lt;/<span style="color: #D65921;">li</span>&gt;
+      &lt;<span style="color: #D65921;">li</span> <span style="color: #EFA252;">class</span>=<span style="color: #8CBED6;">"fruit-element"</span>&gt;tomato&lt;/<span style="color: #D65921;">li</span>&gt;
+   &lt;/<span style="color: #D65921;">ul</span>&gt;
+&lt;/<span style="color: #D65921;">div</span>&gt;
 </pre>
 </div>
 </div>
@@ -502,7 +531,7 @@ of strings. &#x2013;&gt; children.reduce(function(a,b){a+b},"")
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2015-02-12 Thu 18:48</p>
+<p class="date">Created: 2015-02-12 Thu 19:14</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.4.1 (<a href="http://orgmode.org">Org</a> mode 8.2.7c)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
