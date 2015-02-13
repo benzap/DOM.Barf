@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>readme</title>
-<!-- 2015-02-12 Thu 19:14 -->
+<!-- 2015-02-12 Thu 19:27 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <style type="text/css">
@@ -143,39 +143,40 @@ for the JavaScript code in this tag.
 <ul>
 <li><a href="#sec-1">1. DOM.Barf</a></li>
 <li><a href="#sec-2">2. Small Example</a></li>
-<li><a href="#sec-3">3. Features and Operation</a></li>
-<li><a href="#sec-4">4. Examples</a></li>
-<li><a href="#sec-5">5. API Reference</a>
+<li><a href="#sec-3">3. Download</a></li>
+<li><a href="#sec-4">4. Features and Operation</a></li>
+<li><a href="#sec-5">5. Examples</a></li>
+<li><a href="#sec-6">6. API Reference</a>
 <ul>
-<li><a href="#sec-5-1">5.1. DOM.Barf.SpitOut(&lt;tagName&gt;, [tagAttributes], [tagChildren], [options])</a>
+<li><a href="#sec-6-1">6.1. DOM.Barf.SpitOut(&lt;tagName&gt;, [tagAttributes], [tagChildren], [options])</a>
 <ul>
-<li><a href="#sec-5-1-1">5.1.1. Keyword Arguments:</a></li>
-<li><a href="#sec-5-1-2">5.1.2. Optional Arguments:</a></li>
-<li><a href="#sec-5-1-3">5.1.3. Returns:</a></li>
+<li><a href="#sec-6-1-1">6.1.1. Keyword Arguments:</a></li>
+<li><a href="#sec-6-1-2">6.1.2. Optional Arguments:</a></li>
+<li><a href="#sec-6-1-3">6.1.3. Returns:</a></li>
 </ul>
 </li>
-<li><a href="#sec-5-2">5.2. DOM.Barf.toSpit(&lt;tagName&gt;, [passedOptions])</a>
+<li><a href="#sec-6-2">6.2. DOM.Barf.toSpit(&lt;tagName&gt;, [passedOptions])</a>
 <ul>
-<li><a href="#sec-5-2-1">5.2.1. Keyword Arguments:</a></li>
-<li><a href="#sec-5-2-2">5.2.2. Returns:</a></li>
-<li><a href="#sec-5-2-3">5.2.3. Examples:</a></li>
+<li><a href="#sec-6-2-1">6.2.1. Keyword Arguments:</a></li>
+<li><a href="#sec-6-2-2">6.2.2. Returns:</a></li>
+<li><a href="#sec-6-2-3">6.2.3. Examples:</a></li>
 </ul>
 </li>
-<li><a href="#sec-5-3">5.3. DOM.Barf.ToCss(&lt;selectorName&gt;, [attrs])</a>
+<li><a href="#sec-6-3">6.3. DOM.Barf.ToCss(&lt;selectorName&gt;, [attrs])</a>
 <ul>
-<li><a href="#sec-5-3-1">5.3.1. Keyword Arguments:</a></li>
-<li><a href="#sec-5-3-2">5.3.2. Examples:</a></li>
+<li><a href="#sec-6-3-1">6.3.1. Keyword Arguments:</a></li>
+<li><a href="#sec-6-3-2">6.3.2. Examples:</a></li>
 </ul>
 </li>
-<li><a href="#sec-5-4">5.4. DOM.Barf.ToRaw([children])</a>
+<li><a href="#sec-6-4">6.4. DOM.Barf.ToRaw([children])</a>
 <ul>
-<li><a href="#sec-5-4-1">5.4.1. Remarks</a></li>
+<li><a href="#sec-6-4-1">6.4.1. Remarks</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#sec-6">6. Predefined 'toSpit' Functions</a></li>
-<li><a href="#sec-7">7. More Examples</a></li>
+<li><a href="#sec-7">7. Predefined 'toSpit' Functions</a></li>
+<li><a href="#sec-8">8. More Examples</a></li>
 </ul>
 </div>
 </div>
@@ -241,8 +242,18 @@ This produces the HTML string output (formatted for convenience)
 </div>
 
 <div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Features and Operation</h2>
+<h2 id="sec-3"><span class="section-number-2">3</span> Download</h2>
 <div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><a href="https://github.com/benzap/DOM.Barf/releases/tag/v0.1.0">Version 0.1.0</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Features and Operation</h2>
+<div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li>DOM.Barf's main functionality consists of composable functions
 that only need to return a string. This allows for easily
@@ -265,21 +276,21 @@ border-bottom-size)
 </div>
 </div>
 
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> Examples</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Examples</h2>
+<div class="outline-text-2" id="text-5">
 <p>
 <i>todo</i>
 </p>
 </div>
 </div>
 
-<div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> API Reference</h2>
-<div class="outline-text-2" id="text-5">
-</div><div id="outline-container-sec-5-1" class="outline-3">
-<h3 id="sec-5-1"><span class="section-number-3">5.1</span> DOM.Barf.SpitOut(&lt;tagName&gt;, [tagAttributes], [tagChildren], [options])</h3>
-<div class="outline-text-3" id="text-5-1">
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> API Reference</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> DOM.Barf.SpitOut(&lt;tagName&gt;, [tagAttributes], [tagChildren], [options])</h3>
+<div class="outline-text-3" id="text-6-1">
 <p>
 This is the raw input method to barf / spit out a string
 representation of XML. This returns a string representation of:
@@ -290,9 +301,9 @@ representation of XML. This returns a string representation of:
 </pre>
 </div>
 
-<div id="outline-container-sec-5-1-1" class="outline-4">
-<h4 id="sec-5-1-1"><span class="section-number-4">5.1.1</span> Keyword Arguments:</h4>
-<div class="outline-text-4" id="text-5-1-1">
+<div id="outline-container-sec-6-1-1" class="outline-4">
+<h4 id="sec-6-1-1"><span class="section-number-4">6.1.1</span> Keyword Arguments:</h4>
+<div class="outline-text-4" id="text-6-1-1">
 <dl class="org-dl">
 <dt> tagName </dt><dd>the tag of our XML element
 </dd>
@@ -312,9 +323,9 @@ resulting listing should form a list of strings.
 </div>
 </div>
 
-<div id="outline-container-sec-5-1-2" class="outline-4">
-<h4 id="sec-5-1-2"><span class="section-number-4">5.1.2</span> Optional Arguments:</h4>
-<div class="outline-text-4" id="text-5-1-2">
+<div id="outline-container-sec-6-1-2" class="outline-4">
+<h4 id="sec-6-1-2"><span class="section-number-4">6.1.2</span> Optional Arguments:</h4>
+<div class="outline-text-4" id="text-6-1-2">
 <dl class="org-dl">
 <dt> bSingular </dt><dd>whether the given XML element is singular. Namely,
 it has a forward flash, and no children. ex. meta
@@ -331,9 +342,9 @@ attributes. ex. EquivHtmlTerm &#x2013;&gt; equiv-html-term.
 </div>
 </div>
 
-<div id="outline-container-sec-5-1-3" class="outline-4">
-<h4 id="sec-5-1-3"><span class="section-number-4">5.1.3</span> Returns:</h4>
-<div class="outline-text-4" id="text-5-1-3">
+<div id="outline-container-sec-6-1-3" class="outline-4">
+<h4 id="sec-6-1-3"><span class="section-number-4">6.1.3</span> Returns:</h4>
+<div class="outline-text-4" id="text-6-1-3">
 <p>
 A string representing the HTML element described
 </p>
@@ -341,9 +352,9 @@ A string representing the HTML element described
 </div>
 </div>
 
-<div id="outline-container-sec-5-2" class="outline-3">
-<h3 id="sec-5-2"><span class="section-number-3">5.2</span> DOM.Barf.toSpit(&lt;tagName&gt;, [passedOptions])</h3>
-<div class="outline-text-3" id="text-5-2">
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> DOM.Barf.toSpit(&lt;tagName&gt;, [passedOptions])</h3>
+<div class="outline-text-3" id="text-6-2">
 <p>
 Provides partial application for the DOM.Barf.SpitOut function,
 while providing permanently passedOptions which can still be
@@ -351,9 +362,9 @@ overriden at evaluation.
 </p>
 </div>
 
-<div id="outline-container-sec-5-2-1" class="outline-4">
-<h4 id="sec-5-2-1"><span class="section-number-4">5.2.1</span> Keyword Arguments:</h4>
-<div class="outline-text-4" id="text-5-2-1">
+<div id="outline-container-sec-6-2-1" class="outline-4">
+<h4 id="sec-6-2-1"><span class="section-number-4">6.2.1</span> Keyword Arguments:</h4>
+<div class="outline-text-4" id="text-6-2-1">
 <dl class="org-dl">
 <dt> tagName </dt><dd>the tagname to be generated from our returned partial
 function
@@ -366,9 +377,9 @@ DOM.Barf.SpitOut optional arguments.
 </div>
 </div>
 
-<div id="outline-container-sec-5-2-2" class="outline-4">
-<h4 id="sec-5-2-2"><span class="section-number-4">5.2.2</span> Returns:</h4>
-<div class="outline-text-4" id="text-5-2-2">
+<div id="outline-container-sec-6-2-2" class="outline-4">
+<h4 id="sec-6-2-2"><span class="section-number-4">6.2.2</span> Returns:</h4>
+<div class="outline-text-4" id="text-6-2-2">
 <p>
 A partial function of the form function([tagAttributes],
 [tagChildren], [options]) with the same characteristics as
@@ -377,9 +388,9 @@ DOM.Barf.SpitOut.
 </div>
 </div>
 
-<div id="outline-container-sec-5-2-3" class="outline-4">
-<h4 id="sec-5-2-3"><span class="section-number-4">5.2.3</span> Examples:</h4>
-<div class="outline-text-4" id="text-5-2-3">
+<div id="outline-container-sec-6-2-3" class="outline-4">
+<h4 id="sec-6-2-3"><span class="section-number-4">6.2.3</span> Examples:</h4>
+<div class="outline-text-4" id="text-6-2-3">
 <div class="org-src-container">
 
 <pre class="src src-js"><span style="color: #DEC77B;">var</span> <span style="color: #EFA252;">_s</span> = DOM.Barf;
@@ -397,18 +408,18 @@ _s.meta({httpEquiv: <span style="color: #8CBED6;">"X-UA-Compatible"</span>, cont
 </div>
 </div>
 
-<div id="outline-container-sec-5-3" class="outline-3">
-<h3 id="sec-5-3"><span class="section-number-3">5.3</span> DOM.Barf.ToCss(&lt;selectorName&gt;, [attrs])</h3>
-<div class="outline-text-3" id="text-5-3">
+<div id="outline-container-sec-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> DOM.Barf.ToCss(&lt;selectorName&gt;, [attrs])</h3>
+<div class="outline-text-3" id="text-6-3">
 <p>
 Generates a stylesheet for the provided selector tag, and tag
 attributes.
 </p>
 </div>
 
-<div id="outline-container-sec-5-3-1" class="outline-4">
-<h4 id="sec-5-3-1"><span class="section-number-4">5.3.1</span> Keyword Arguments:</h4>
-<div class="outline-text-4" id="text-5-3-1">
+<div id="outline-container-sec-6-3-1" class="outline-4">
+<h4 id="sec-6-3-1"><span class="section-number-4">6.3.1</span> Keyword Arguments:</h4>
+<div class="outline-text-4" id="text-6-3-1">
 <dl class="org-dl">
 <dt> selectorName </dt><dd>The name to provide for the css selector
 </dd>
@@ -420,9 +431,9 @@ selector
 </div>
 </div>
 
-<div id="outline-container-sec-5-3-2" class="outline-4">
-<h4 id="sec-5-3-2"><span class="section-number-4">5.3.2</span> Examples:</h4>
-<div class="outline-text-4" id="text-5-3-2">
+<div id="outline-container-sec-6-3-2" class="outline-4">
+<h4 id="sec-6-3-2"><span class="section-number-4">6.3.2</span> Examples:</h4>
+<div class="outline-text-4" id="text-6-3-2">
 <div class="org-src-container">
 
 <pre class="src src-js"><span style="color: #DEC77B;">var</span> <span style="color: #EFA252;">_s</span> = DOM.Barf;
@@ -449,9 +460,9 @@ _s.style(<span style="color: #DEC77B;">null</span>, [
 </div>
 </div>
 
-<div id="outline-container-sec-5-4" class="outline-3">
-<h3 id="sec-5-4"><span class="section-number-3">5.4</span> DOM.Barf.ToRaw([children])</h3>
-<div class="outline-text-3" id="text-5-4">
+<div id="outline-container-sec-6-4" class="outline-3">
+<h3 id="sec-6-4"><span class="section-number-3">6.4</span> DOM.Barf.ToRaw([children])</h3>
+<div class="outline-text-3" id="text-6-4">
 <p>
 Concatenates and allows raw input of string data into DOM.Barf
 </p>
@@ -467,9 +478,9 @@ Keyword Arguments:
 </dl>
 </div>
 
-<div id="outline-container-sec-5-4-1" class="outline-4">
-<h4 id="sec-5-4-1"><span class="section-number-4">5.4.1</span> Remarks</h4>
-<div class="outline-text-4" id="text-5-4-1">
+<div id="outline-container-sec-6-4-1" class="outline-4">
+<h4 id="sec-6-4-1"><span class="section-number-4">6.4.1</span> Remarks</h4>
+<div class="outline-text-4" id="text-6-4-1">
 <p>
 This function is functionally equivalent to concatenating a list
 of strings. &#x2013;&gt; children.reduce(function(a,b){a+b},"")
@@ -479,9 +490,9 @@ of strings. &#x2013;&gt; children.reduce(function(a,b){a+b},"")
 </div>
 </div>
 
-<div id="outline-container-sec-6" class="outline-2">
-<h2 id="sec-6"><span class="section-number-2">6</span> Predefined 'toSpit' Functions</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Predefined 'toSpit' Functions</h2>
+<div class="outline-text-2" id="text-7">
 <ul class="org-ul">
 <li>DOM.Barf.html = DOM.Barf.toSpit("html");
 </li>
@@ -521,9 +532,9 @@ of strings. &#x2013;&gt; children.reduce(function(a,b){a+b},"")
 </div>
 </div>
 
-<div id="outline-container-sec-7" class="outline-2">
-<h2 id="sec-7"><span class="section-number-2">7</span> More Examples</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> More Examples</h2>
+<div class="outline-text-2" id="text-8">
 <p>
 <i>coming soon</i>
 </p>
@@ -531,7 +542,7 @@ of strings. &#x2013;&gt; children.reduce(function(a,b){a+b},"")
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2015-02-12 Thu 19:14</p>
+<p class="date">Created: 2015-02-12 Thu 19:27</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.4.1 (<a href="http://orgmode.org">Org</a> mode 8.2.7c)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
