@@ -43,6 +43,9 @@ console.log(output);
 </div>
   #+END_SRC
 
+* Download
+  - [[https://github.com/benzap/DOM.Barf/releases/tag/v0.1.0][Version 0.1.0]]
+
 * Features and Operation
   - DOM.Barf's main functionality consists of composable functions
     that only need to return a string. This allows for easily
