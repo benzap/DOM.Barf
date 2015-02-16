@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div id="container"></div>
+		<script type="text/javascript" src="DOM.Barf.js"></script>
+		<script type="text/javascript">
+		 var _s = DOM.Barf;
+		 _s.h1 = _s.toSpit("h1");
+		 _s.h2 = _s.toSpit("h2");
+		 _s.h3 = _s.toSpit("h3");
+		 _s.h4 = _s.toSpit("h4");
+		 _s.span = _s.toSpit("span");
+
+		 var layout = {
+			 sidebarWidth: 200,
+			 headerHeight: 50,
+			 footerHeight: 50,
+		 };		 
+		 
+		 /* css styles */
+		 document.head.innerHTML += _s.ToRaw([
+			 _s.title(null, "DOM.Barf Home Page"),
+
+			 /* Main Stylesheet */
+			 _s.style(null, [
+				 _s.ToCss("*", {
+					 margin: "0",
+					 padding: "0",
+					 fontFamily: "'Bitter', serif",
+					 
+				 }),
+				 _s.ToCss("html", {
+					 margin: "0",
+					 height: "100%",
+				 }),
+				 _s.ToCss("body", {
+					 position: "relative",
+					 height: "100%",
+					 width: "100%",
+				 }),
+				 _s.ToCss("h1, h2, h3, h4", {
+					 fontFamily: "'Open Sans', sans-serif",
+					 padding: "5px",
+				 }),
+				 _s.ToCss("p", {
+					 padding: "7px",
+				 }),
+				 _s.ToCss("a",{
+					 color: "#67A99D",
+					 textDecoration: "none",
+				 }),
+				 _s.ToCss("#container", {
+ 					 position: "absolute",
+					 height: "100%",
+					 width: "100%",
+				 }),
+				 _s.ToCss("#content", {
+					 position: "relative",
+					 height: "100%",
+					 width: "100%",
+				 }),
+				 _s.ToCss("#header", {
+					 position: "absolute",
+					 top: "0",
+					 left: layout.sidebarWidth + "px",
+					 right: 0,
+					 height: layout.headerHeight + "px",
+					 backgroundColor: "#D1A19F",
+				 }),
+				 _s.ToCss("#sidebar", {
+					 position: "relative",
+					 width: layout.sidebarWidth + "px",
+					 height: "100%",
+					 backgroundColor: "#99959C",
+					 float: "left",
+				 }),
+				 _s.ToCss("#main-content", {
+					 position: "relative",
+					 left: layout.sidebarWidth/2 + "px",
+					 top: layout.headerHeight + "px",
+					 width: (window.innerWidth - layout.sidebarWidth) + "px",
+					 padding: "20px 10px",
+				 }),
+			 ]),
+		 ]);
+		 
+		 var content = document.getElementById("container");
+		 content.innerHTML += _s.div({id: "content"}, [
+			 _s.div({id: "header"}, [
+				 _s.h1({style: {textAlign: "center", padding: "3px", fontSize: "32px",}}, "DOM.Barf"),
+			 ]),
+			 _s.div({id: "sidebar"}, [
+				 
+			 ]),
+			 _s.div({id: "main-content"}, [
+				 _s.h1(null, "Github Page"),
+				 _s.p(null, [
+					 _s.a({href: "http://github.com/benzap/DOM.Barf"}, "here"),
+				 ]), 
+			 ]),
+		 ]);
+		 
+		</script>
+	</body>
+</html>
