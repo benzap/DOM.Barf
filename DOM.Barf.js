@@ -141,7 +141,6 @@ DOM.Barf = DOM.Barf || {};
             //we treat an object as a css separated set of values for convenience
             else if (typeof value === "object") {
                 cssOutput = parseCssOutput(value, options);
-		console.log(key);
                 outputString += " " + key + "=" + "\"" + cssOutput + "\"";
 		continue;
             }
