@@ -201,10 +201,18 @@ DOM.Barf = DOM.Barf || {};
     context.title = toSpit("title");
     context.body = toSpit("body");
     context.div = toSpit("div");
+    context.h1 = toSpit("h1");
+    context.h2 = toSpit("h2");
+    context.h3 = toSpit("h3");
+    context.h4 = toSpit("h4");
+    context.h5 = toSpit("h5");
     context.img = toSpit("img", {bSingular:true});
     context.a = toSpit("a");
+    context.b = toSpit("b");
+    context.span = toSpit("span");
     context.p = toSpit("p");
     context.input = toSpit("input");
+    context.button = toSpit("button");
     context.table = toSpit("table");
     context.tr = toSpit("tr");
     context.td = toSpit("td");
@@ -225,6 +233,29 @@ DOM.Barf = DOM.Barf || {};
      */
     context.ToRaw = function(children) {
 	return parseTagChildren(children);
+    }
+
+    /*
+      Merges the object attributes from b into a
+     */
+    context.Merge = function(a, b) {
+        for (key in b) {
+            if (b.hasOwnProperty(key)) {
+                if (typeof a[key] == "object" && typeof b[key] == "object") {
+                    a[key] = merge(a[key], b[key]);
+                }
+                else {
+                    a[key] = b[key];
+                }
+            }
+        }
+	return a;
+    }
+
+    context.ToDOMNode = function(s) {
+	var wrapper = document.createElement("div");
+	wrapper.innerHTML = s;
+	return wrapper.firstChild;
     }
     
 })(DOM.Barf);

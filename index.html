@@ -102,6 +102,16 @@
 				 ]), 
 			 ]),
 		 ]);
+
+		 var create_defaultButton = function(attrs, children) {
+			 var attrs = attrs || {};
+			 
+			 return _s.ToDOMNode(
+				 _s.button(_s.Merge({value: "Test Button"}, attrs), children)
+			 )
+		 }
+
+		 console.log(create_defaultButton({value: "New button"}, "test"));
 		 
 		</script>
 	</body>
