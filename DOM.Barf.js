@@ -49,7 +49,7 @@ var DOM = DOM || {};
 DOM.Barf = DOM.Barf || {};
 
 (function(context) {
-    context.VERSION = "0.1.0";
+    context.VERSION = "0.2.1";
     
     /*
       This is the raw input method to barf / spit out a string
@@ -242,7 +242,7 @@ DOM.Barf = DOM.Barf || {};
         for (key in b) {
             if (b.hasOwnProperty(key)) {
                 if (typeof a[key] == "object" && typeof b[key] == "object") {
-                    a[key] = merge(a[key], b[key]);
+                    a[key] = context.Merge(a[key], b[key]);
                 }
                 else {
                     a[key] = b[key];
