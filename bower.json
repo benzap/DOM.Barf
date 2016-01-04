@@ -1,7 +1,7 @@
 {
   "name": "DOM.Barf",
   "main": "DOM.Barf.js",
-  "version": "0.1",
+  "version": "0.2.1",
   "homepage": "https://github.com/benzap/DOM.Barf",
   "authors": [
     "Benjamin Zaporzan <benzaporzan@gmail.com>"
