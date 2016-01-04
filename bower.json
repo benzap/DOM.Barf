@@ -7,6 +7,7 @@
     "Benjamin Zaporzan <benzaporzan@gmail.com>"
   ],
   "description": "Create HTML strings by functionally composing javascript functions, inspired by Hiccup.",
+  "private": true,
   "moduleType": [
     "globals"
   ],
