@@ -1,0 +1,29 @@
+{
+  "name": "DOM.Barf",
+  "main": "DOM.Barf.js",
+  "version": "0.2.1",
+  "homepage": "https://github.com/benzap/DOM.Barf",
+  "authors": [
+    "Benjamin Zaporzan <benzaporzan@gmail.com>"
+  ],
+  "description": "Create HTML strings by functionally composing javascript functions, inspired by Hiccup.",
+  "private": true,
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "html",
+    "dom",
+    "disgusting"
+  ],
+  "ignore": [
+    ".git/",
+    ".gitignore",
+    "doc/",
+    "examples/",
+    "index.html",
+    "readme.html",
+    "readme.org"
+  ],
+  "license": "MIT"
+}
